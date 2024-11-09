@@ -1,1 +1,45 @@
 /* Egen custom CSS här */
+@font-face {
+    font-family: "F1";
+    src: url(/Fonts/F1.ttf);
+}
+
+@font-face {
+    font-family: "F1s";
+    src: url(/Fonts/F1s.ttf);
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+h1 {
+    font-family: F1;
+    margin-left: 0px;
+}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 130px;
+    }
+}
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 100px;
+    }
+}
+
+.ikon1 {
+    width: 150px;
+    height: 150px;
+}
+
+.chaos {
+    color: rgb(255, 236, 115);
+}
+
+#hem {
+    width: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
