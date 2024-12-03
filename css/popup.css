@@ -1,0 +1,35 @@
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .d {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: scroll;
+  }
+  
+  .content {
+    display: flex;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 10px solid rgb(52, 80, 44);
+    border-radius: 40px;
+    width: 75%;
+  }
+  
