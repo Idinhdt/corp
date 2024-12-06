@@ -234,19 +234,24 @@
         <img src="img/guy.png" class="gubb rounded mx-auto d-block">
         <img src="img/saved.svg" class="box">
         <h3>MY SAVED</h3>
-        
+        <div id="slist">
+          <ul id="list">
+          </ul>
+    
+        </div>  
       </div>
       <div class="col-8 sektion">
-        <h2>DEATH GUARD</h2>
+        <h2>DEATH GUARD</h2>    
         <input type="image" src="img/DG_mini/DG.mini (1).svg" class="col-2 mini" id="dm1">
         <div id="d1" class="d">
           <div class="content">
             <span class="close">&times;</span>
-            <img src="img/DG/DG_BiologusPutrifier.jpg" class="bild">
+            <img src="img/DG/DG_BiologusPutrifier.jpg" class="bild" alt="Biologus Putrifier">
             <div>
               <h4> Biologus Putrifier</h4>
               <div class="chartn"><canvas id="DG1"></canvas></div>
             </div>
+            <button class="save" data-img="img/DG/DG_BiologusPutrifier.jpg"> Save </button>
           </div>
         </div>
         <img src="img/DG_mini/DG.mini (1).svg" class="col-2 mini">
@@ -257,5 +262,6 @@
   </div>
   <script src="js/popup.js"></script>  
   <script src="js/charts.js"></script>
+  <script src="js/dom.js"></script>
 </body>
 </html>
