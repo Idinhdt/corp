@@ -17,3 +17,9 @@
       modal.style.display = "none";
     }
   };
+
+
+  function sparade() {
+    var lists = document.getElementById("slist");
+    lists.classList.toggle("show");
+  }
