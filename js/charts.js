@@ -1,4 +1,4 @@
-const allastats = ['Movement', 'Toughness', 'Save', 'Wounds', 'Leadership', 'Objective control']
+const allastats = ['M', 'T', 'SV', 'W', 'LD', 'OC']
 
 function Mall(ctx, data) {
   new Chart(ctx, {
@@ -27,6 +27,11 @@ function Mall(ctx, data) {
           ticks: {
             maxRotation: 0,
             minRotation: 0,
+            color: 'black',
+            font : {
+              size: 15,
+              family: 'F3'
+            }
           }
         },
         y: {
@@ -70,14 +75,48 @@ function Mall(ctx, data) {
 }
 
 Chart.defaults.borderColor = 'rgba (0, 0, 0, 1)';
-Chart.defaults.backgroundColor = 'rgba (0, 0, 0, 1)';
+Chart.defaults.backgroundColor = 'rgba(0, 0, 0, 0.4)';
 
-const MD1 = document.getElementById('DG1');
-const data1 = [5, 5, 3, 4, 6, 1]; 
+const chartMappings = {
+  553461: [5, 5, 3, 4, 6, 1],
+  553561: [5, 5, 3, 5, 6, 1],
+  462661: [4, 6, 2, 6, 6, 1],
+  71121063: [7, 11, 2, 10, 6, 3],
+  111021063: [11, 10, 2, 10, 6, 3],
+  553451: [5, 5, 3, 4, 5, 1],
+  462561: [4, 6, 2, 5, 6, 1],
+  101221656: [10, 12, 2, 16, 5, 6],
+  562661: [5, 6, 2, 6, 6, 1],
+  553261: [5, 5, 3, 2, 6, 1],
+  12931062: [12, 9, 3, 10, 6, 2],
+  X1031260: [0, 10, 3, 12, 6, 0],
+  462361: [4, 6, 2, 3, 6, 1],
+  854471: [8, 5, 4, 4, 7, 1],
+  636171: [6, 3, 6, 1, 7, 1],
+  81031465: [8, 10, 3, 14, 6, 5],
+  692863: [6, 9, 2, 8, 6, 3],
+  101221665: [10, 12, 2, 16, 6, 5],
+  101031164: [10, 10, 3, 11, 6, 4],
+  10931063: [10, 9, 3, 10, 6, 3],
+  101021264: [10, 10, 2, 12, 6, 4],
+  447181: [4, 4, 7, 1, 8, 1],
+  696772: [6, 9, 6, 7, 7, 2],
+  71252065: [7, 12, 5, 20, 6, 5],
+  61031072: [6, 10, 3, 10, 7, 2],
+  537480: [5, 3, 7, 4, 8, 0],
+  557272: [5, 5, 7, 2, 7, 2],
+  1086572: [10, 8, 6, 5, 7, 2],
+  557571: [5, 5, 7, 5, 7, 1],
+  71252265: [7, 12, 5, 22, 6, 1],
+  557561: [5, 5, 7, 5, 6, 1],
+};
 
-const MD2 = document.getElementById('DG2');
-const data2 = [4, 6, 2, 5, 7, 2]; 
 
+Object.entries(chartMappings).forEach(([id, data]) => {
+  
+  const containers = document.getElementsByClassName(id); 
 
-Mall(MD1, data1);
-Mall(MD2, data2);
+  Array.from(containers).forEach((container) => {
+    Mall(container, data); 
+  });
+});

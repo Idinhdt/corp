@@ -12,27 +12,43 @@
     cursor: pointer;
   }
   
-  .d {
+  .modal {
     display: none;
     position: fixed; 
     z-index: 1; 
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%; 
     height: 100%; 
-    overflow: scroll;
+    background: rgba(0, 0, 0, 0.5);
   }
   
   .content {
     display: flex;
+    flex-direction: column;
     background-color: #fefefe;
-    margin: 15% auto;
     padding: 20px;
+    padding-bottom: 40px;
     border: 10px solid rgb(52, 80, 44);
     border-radius: 40px;
     width: 90%;
+    max-width: 75%; 
+    max-height: 90%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
+  .save {
+    height: 40px;
+    width: auto;
+    font-family: F3;
+    color: black;
+    background-color: #aaa;
+    position: absolute;
+    right: 100px;
+  }
 
 
 
@@ -41,55 +57,51 @@
 
 
 
-  /* Popup container */
+
 .h3 {
-  position: relative;
-  display: inline-block;
   cursor: pointer;
+  overflow: visible;
+  padding: 10px;
+  font-family: F3;
+  color: lightyellow;
+  background-color: #444444;
+  height: auto;
+  width: 50%;
+  position: absolute;
+  left: 25%;
 }
 
-/* The actual popup (appears on top) */
-.h3 #slist {
+#slist {
   visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(19, 19, 19);
+  border: solid 5px;
+  border-color: #444444;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  display: block; 
+  overflow: scroll;
+  align-items: center; 
+  justify-content: center;
 }
 
-/* Popup arrow */
-.h3 #slist::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
 #slist.show {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
 }
 
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.lists button {
+  color: rgb(153, 156, 156);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: black;
+  border-radius: 50%;
+  border: solid black;
+  position: absolute;
+  left: 20;
+  top: 20;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}

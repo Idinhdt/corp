@@ -11,15 +11,60 @@
     />
     <link rel="stylesheet" href="css/breakpoints.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-  <title> Slaanesh </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+  <title> Slaanesg </title>
 </head>
 <body>
   
-  
+  <div id="wrapper">
+    <div class="row" id="meny"> 
+      <div class="col-lg-4 text-center"> 
+        <h1 class="slaanesh">Slaanesh</h1>  
+      </div>
+      <div class="col-lg-7 d-flex justify-content-evenly">
+        <a href="http://127.0.0.1:3000/khorne.html"> 
+          <img src="img/khorne.svg" class="ikon1">
+        </a>
+        <a href="http://127.0.0.1:3000/tzeentch.html">
+          <img src="img/tzeentch.svg" class="ikon1">
+        </a>
+        <a href="http://127.0.0.1:3000/slaanesh.html">
+          <img src="img/slaanesh.svg" class="ikon1">
+        </a>
+        <a href="http://127.0.0.1:3000/nurgle.html">
+          <img src="img/nurgle.svg" class="ikon1">
+        </a>  
+      </div>
+      <div class="col-lg-1">
+        <a href="http://127.0.0.1:3000/chaos.html"><img src="img/home.svg" id="hem"></a>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="col-4" id="sbg">
+        <img src="img/guy.png" class="gubb rounded mx-auto d-block">
+        <button class="h3" onclick="sparade()">MY SAVED</button>
+        <div id="slist" class="lists">
+          <button onclick="closed()">X</button>
+          <ul id="list">
+          </ul>
+        </div> 
+      
+      </div>
+      <div class="col-8 sektion justify-content-evenly">
+        <h2>Emperors Children</h2>  			        
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>  
+  <script src="js/charts.js"></script>
+  <script src="js/dom.js"></script>
 </body>
 </html>

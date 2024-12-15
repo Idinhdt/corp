@@ -1,25 +1,39 @@
+var openButtons = document.querySelectorAll('.mini');
 
-  var modal = document.getElementById("d1");
-  var img = document.getElementById("dm1");
-  var span = document.getElementsByClassName("close")[0];
-
-  
-  img.onclick = function () {
+openButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var modalId = button.getAttribute('data-modal');
+    var modal = document.getElementById(modalId);
     modal.style.display = "block";
-  };
+  });
+});
 
-  span.onclick = function () {
+var closeButtons = document.querySelectorAll('.close');
+closeButtons.forEach(function(closeButton) {
+  closeButton.addEventListener('click', function() {
+    var modal = closeButton.closest('.modal');
     modal.style.display = "none";
-  };
+  });
+});
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
+window.addEventListener('click', function(event) {
+  var modals = document.querySelectorAll('.modal');
+  modals.forEach(function(modal) {
+    if (event.target === modal) {
       modal.style.display = "none";
     }
-  };
+  });
+});
 
+//--------------------------------------------------//
+
+const lists = document.getElementById("slist");
+const close = document.getElementById("x");
 
   function sparade() {
-    var lists = document.getElementById("slist");
     lists.classList.toggle("show");
+  }
+
+  function closed() {
+    lists.classList.remove("show");
   }

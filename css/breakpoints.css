@@ -1,0 +1,115 @@
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 60px;
+  }
+  .ikon1 {
+    width: 100px;
+    height: 100px;
+  }
+  .gubb {
+    visibility: hidden;
+  }
+  #nbg, #cbg, #kbg, #tbg, #sbg {
+    visibility: hidden;
+    width: 0;
+  }
+  .h3 {
+    visibility: visible;
+    min-width: 20vh;
+    margin: 20px;
+    top: 0;
+  }
+  .mini {
+    width: 40%;
+  }
+  h2 {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 80px;
+  }
+  .ikon1 {
+    width: 120px;
+    height: 120px;
+  }
+  #nbg, #cbg, #kbg, #tbg, #sbg {
+    height: 70vh;
+  }
+  .gubb {
+    max-height: 90%;
+  }
+  .mini {
+    width: 40%;
+  }
+  .h3 {
+  bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 100px;
+  }
+  .ikon1 {
+    width: 130px;
+    height: 130px;
+  }
+  #nbg, #cbg, #kbg, #tbg, #sbg {
+    height: 65vh;
+  }
+  .mini {
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 100px;
+  }
+  .ikon1 {
+    width: 140px;
+    height: 140px;
+  }
+  #nbg, #cbg, #kbg, #tbg, #sbg {
+    height: 80vh;
+  }
+  .gubb {
+    max-height: 100%;
+  }
+  .mini {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 130px;
+  }
+  .ikon1 {
+    width: 150px;
+    height: 150px;
+  }
+  .mini {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 140px;
+  }
+  .ikon1 {
+    width: 170px;
+    height: 170px;
+  }
+  #nbg, #cbg, #kbg, #tbg, #sbg {
+    height: 78vh;
+  }
+}
+
+
+
