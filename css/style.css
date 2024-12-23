@@ -176,10 +176,15 @@ h4 {
 }
 
 #list img {
-    height: auto;
-    width: 300px;
+    height: 250px;
+    width: auto;
     border: solid 5px;
     border-radius: 5px;
+}
+
+.classlist {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #slist {
